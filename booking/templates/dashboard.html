@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Dashboard Overview</h2>
+<hr>
+<div class="row g-4 mb-4">
+    <div class="col-md-3"><div class="card text-white bg-primary p-3"><h5>Airlines</h5><h3>{{ total_airlines }}</h3></div></div>
+    <div class="col-md-3"><div class="card text-white bg-success p-3"><h5>Airplanes</h5><h3>{{ total_airplanes }}</h3></div></div>
+    <div class="col-md-3"><div class="card text-white bg-info p-3"><h5>Airports</h5><h3>{{ total_airports }}</h3></div></div>
+    <div class="col-md-3"><div class="card text-white bg-warning p-3"><h5>Flights</h5><h3>{{ total_flights }}</h3></div></div>
+    <div class="col-md-3"><div class="card text-white bg-secondary p-3"><h5>Seats</h5><h3>{{ total_seats }}</h3></div></div>
+    <div class="col-md-3"><div class="card text-white bg-dark p-3"><h5>Passengers</h5><h3>{{ total_persons }}</h3></div></div>
+    <div class="col-md-3"><div class="card text-white bg-danger p-3"><h5>Bookings</h5><h3>{{ total_bookings }}</h3></div></div>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card shadow p-4 mx-auto" style="max-width: 600px;">
+    <h3>{% if form.instance.pk %}Edit{% else %}Add{% endif %} Airplane</h3>
+    <form method="post" enctype="multipart/form-data" class="mt-3">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success w-100">Save</button>
+    </form>
+    <a href="{% url 'booking:list_airplane' %}" class="btn btn-secondary w-100 mt-2">Back to List</a>
+</div>
+{% endblock %}
